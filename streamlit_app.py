@@ -7,15 +7,14 @@ from openai import OpenAI
 
 # Create an OpenAI client
 openai_api_key = st.secrets["OpenAI_Key"]
-prompt = st.secrets["prompt"]
-
+system_prompt = st.secrets["prompt"]
 
 # Define a function to interact with OpenAI API
-def generate_response(messages, prompt):
+def generate_response(messages):
     client = OpenAI(api_key=openai_api_key)
     stream = client.chat.completions.create(
         model="gpt-4o-mini-2024-07-18",  # Updated to a more recent model
-        messages=messages + [{"role": "system", "content": prompt}],
+        messages=messages,  # Now this contains all conversation history
         stream=True,
         temperature=1.3,  # Lowered temperature for more coherent responses
         max_tokens=3000,  # Reduced max tokens to prevent overly long responses
@@ -77,9 +76,11 @@ if user_input := st.chat_input("Décrivez votre projet ou le type de données do
     with st.chat_message("user"):
         st.markdown(user_input)
 
+    # Prepare full conversation history including system prompt
+    full_conversation = [{"role": "system", "content": system_prompt}] + st.session_state.messages
+
     # Generate a response using the OpenAI API
-    full_prompt = prompt + user_input
-    stream = generate_response(st.session_state.messages, full_prompt)
+    stream = generate_response(full_conversation)
 
     # Display assistant response
     with st.chat_message("assistant"):

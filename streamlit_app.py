@@ -9,6 +9,24 @@ from openai import OpenAI
 openai_api_key = st.secrets["OpenAI_Key"]
 system_prompt = st.secrets["prompt"]
 
+st.title("🔍 Data Finder - Chatbot")
+st.write(
+    """Hello à tous,    
+    """
+)
+st.write(
+    "Lors de mon stage, j’ai vu que l’accès aux données était difficile: plusieurs plateformes & intermédiaires. Data Finder centralise ces données et vous dit où elles sont."
+)
+
+st.write(
+    "Vous avez utilisé Data Finder ? J’aimerais beaucoup avoir vos retours pour continuer à le perfectionner ! [Mon mail](mailto:alexandre.ruffierdepenoux@essec.edu)"
+)
+
+st.write(
+    "N.B. Les données générées par Data Finder sont fictives et visent seulement à illustrer son fonctionnement pour vous aider à mieux vous projeter."
+)
+
+
 # Define a function to interact with OpenAI API
 def generate_response(messages):
     client = OpenAI(api_key=openai_api_key)

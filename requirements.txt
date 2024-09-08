@@ -1,6 +1,2 @@
 streamlit
 openai
-formataddr
-MIMEApplication
-MIMEMultipart
-MIMEText

@@ -15,15 +15,15 @@ st.write(
     """
 )
 st.write(
-    "Lors de mon stage, j’ai vu que l’accès aux données était difficile: plusieurs plateformes & intermédiaires. Data Finder centralise ces données et vous dit où elles sont."
+    "Pendant mon stage, j’ai constaté que l’accès aux données dans l’entreprise était souvent complexe, avec des informations dispersées sur plusieurs plateformes et nécessitant divers intermédiaires. Data Finder a pour objectif de centraliser ces données et de vous indiquer où elles se trouvent pour simplifier votre travail."
 )
 
 st.write(
-    "Vous avez utilisé Data Finder ? J’aimerais beaucoup avoir vos retours pour continuer à le perfectionner ! [Mon mail](mailto:alexandre.ruffierdepenoux@essec.edu)"
+    "Avez-vous déjà utilisé Data Finder ? Vos retours me seraient très précieux pour continuer à améliorer l’outil. N’hésitez pas à me contacter à [mon adresse email](mailto:alexandre.ruffierdepenoux@essec.edu) pour partager vos impressions et suggestions."
 )
 
 st.write(
-    "N.B. Les données générées par Data Finder sont fictives et visent seulement à illustrer son fonctionnement pour vous aider à mieux vous projeter."
+    "P.S. : Les données fournies par Data Finder sont fictives et servent uniquement à illustrer son fonctionnement, afin de vous permettre de mieux comprendre son potentiel."
 )
 
 

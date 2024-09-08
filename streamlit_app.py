@@ -11,7 +11,7 @@ system_prompt = st.secrets["prompt"]
 
 st.title("🔍 Data Finder - Chatbot")
 st.write(
-    """Hello à tous,    
+    """Bonjour à tous,    
     """
 )
 st.write(
